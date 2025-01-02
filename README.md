@@ -38,13 +38,17 @@ The links daily project is a react native project I built with Tutor Ryan for a 
   ```bash
   cd project-name
 
+
 3. Install dependencies:
   ```bash
   npm install
 
+
 4. Run the application:
   ```bash
   npm start
+
+
 
 ## **Usage**
 Provide a step-by-step guide or examples on how to use the project. Include screenshots or GIFs if possible.
