@@ -35,18 +35,18 @@ The links daily project is a react native project I built with Tutor Ryan for a 
    git clone https://github.com/Eniola1272/linksdaily.git
 
 2. Navigate to the project directory:
-  ```bash
-  cd project-name
+   ```bash
+   cd project-name
 
 
 3. Install dependencies:
-  ```bash
-  npm install
+   ```bash
+   npm install
 
 
 4. Run the application:
-  ```bash
-  npm start
+   ```bash
+   npm start
 
 
 
