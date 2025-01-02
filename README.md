@@ -5,7 +5,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/Eniola1272/linksdaily?style=social) 
 ![GitHub forks](https://img.shields.io/github/forks/Eniola1272/linksdaily?style=social)
 
-The links daily project is a react native project I built with Tutor Ryan for a course project. It is meant to fetch daily links?
+The links daily project is a react native project. It is meant to fetch daily links?
 
 ---
 
@@ -51,4 +51,31 @@ The links daily project is a react native project I built with Tutor Ryan for a 
 
 
 ## **Usage**
-Provide a step-by-step guide or examples on how to use the project. Include screenshots or GIFs if possible.
+It's easy to use. Just follow the prompts
+
+## **Contributing**
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+
+3. Commit your changes:
+   ```bash
+   git commit -m "Add a feature"
+
+4. Push the changes:
+   ```bash
+   git push origin feature-name
+
+5. Create a pull request.
+
+
+## **License**
+This project is licensed under the MIT License.
+
+## **Acknowledgements**
+
+Thanks to Ryan Dhungel for Teaching me.
