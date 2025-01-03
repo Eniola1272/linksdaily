@@ -26,6 +26,7 @@ const UserInput = ({
       autoCapitalize={autoCapitalize}
       keyboardType={keyboardType}
       secureTextEntry={secureTextEntry}
+      
         style={{
           height: 40,
           borderColor: "gray",
