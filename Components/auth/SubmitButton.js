@@ -1,8 +1,9 @@
 import React from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 
-const SubmitButton = () => (
+const SubmitButton = ({title, handleSubmit, loading}) => (
     <TouchableOpacity
+        onPress={handleSubmit}
         style={{
           marginHorizontal: 24,
           marginTop: 14,
@@ -17,7 +18,7 @@ const SubmitButton = () => (
             color: "white",
             fontSize: 16
           }}>
-            Submit
+            { loading ? "Please wait..." : title}
           </Text>
       </TouchableOpacity>
 )

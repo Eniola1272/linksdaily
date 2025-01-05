@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import UserInput from "../Components/auth/UserInput";
 import SubmitButton from "../Components/auth/SubmitButton";
+import axios from "axios";
+import CircleLogo from "../Components/auth/CircleLogo";
+
 // import Text from "@kaloraat/react-native-text"
 
 const Signup = () => {
@@ -9,6 +12,30 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    if (!name || !email || !password) {
+      alert("All fields are required");
+      setLoading(false);
+      return;
+    }
+    // console.log("SIGNUP REQUEST => ", name, email, password);
+    
+    try {
+      const { data } = await axios.post("http://localhost:8000/api/signup", {
+        name,
+        email,
+        password,
+      });
+      setLoading(false);
+      console.log("SIGN IN SUCCESS => ", data);
+      alert("Sign up successful");
+    } catch (err) {
+      console.log(err);
+      setLoading(false);
+    }
+  };
 
   return (
     <View
@@ -18,6 +45,7 @@ const Signup = () => {
         paddingHorizontal: 24,
       }}
     >
+      <CircleLogo />
       {/* Title */}
       <Text
         style={{
@@ -55,7 +83,11 @@ const Signup = () => {
         autoCompleteType="password"
       />
 
-      <SubmitButton />
+      <SubmitButton
+        title="Sign Up"
+        handleSubmit={handleSubmit}
+        loading={loading}
+      />
 
       <Text>{JSON.stringify({ name, email, password }, null, 4)}</Text>
     </View>

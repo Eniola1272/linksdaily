@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@kaloraat/react-native-text": "^1.0.4",
+    "axios": "^1.7.9",
     "expo": "^52.0.16",
     "expo-constants": "~17.0.2",
     "expo-linking": "~7.0.2",
