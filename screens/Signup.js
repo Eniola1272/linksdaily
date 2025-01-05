@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import UserInput from "../Components/auth/UserInput";
 // import Text from "@kaloraat/react-native-text"
 
@@ -54,7 +54,21 @@ const Signup = () => {
         autoCompleteType="password"
       />
 
-      <Button title="Submit" />
+      <TouchableOpacity
+        style={{
+          paddingVertical: 14,
+          backgroundColor: "#2196f3",
+        }}
+        >
+          <Text style={{
+            textAlign: 'center',
+            fontWeight: 600,
+            color: "white",
+            fontSize: 16
+          }}>
+            Submit
+          </Text>
+      </TouchableOpacity>
 
       <Text>{JSON.stringify({ name, email, password }, null, 4)}</Text>
     </View>
