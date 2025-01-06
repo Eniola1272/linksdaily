@@ -69,6 +69,7 @@ const Signup = () => {
         </Text>
 
         {/* User Input */}
+        
         <UserInput
           label="NAME"
           value={name}
