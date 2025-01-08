@@ -15,30 +15,29 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 // import Text from "@kaloraat/react-native-text"
 
-const Signup = () => {
-  const [name, setName] = useState("");
+const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
     setLoading(true);
-    if (!name || !email || !password) {
+    if (!email || !password) {
       alert("All fields are required");
       setLoading(false);
       return;
     }
-    // console.log("SIGNUP REQUEST => ", name, email, password);
+    // console.log("Signin REQUEST => ",  email, password);
 
     try {
-      const { data } = await axios.post("http://localhost:8000/api/signup", {
-        name,
+      const { data } = await axios.post("http://localhost:8000/api/signin", {
+        
         email,
         password,
       });
       setLoading(false);
       console.log("SIGN IN SUCCESS => ", data);
-      alert("Sign up successful");
+      alert("Sign In successful");
     } catch (err) {
       console.log(err);
       setLoading(false);
@@ -65,18 +64,10 @@ const Signup = () => {
             marginBottom: 24,
           }}
         >
-          Sign Up
+          Sign In
         </Text>
-
+ 
         {/* User Input */}
-
-        <UserInput
-          label="NAME"
-          value={name}
-          setValue={setName}
-          autoCapitalize="words"
-          autoCorrect={false}
-        />
 
         <UserInput
           label="EMAIL"
@@ -95,17 +86,17 @@ const Signup = () => {
         />
 
         <SubmitButton
-          title="Sign Up"
+          title="Sign In"
           handleSubmit={handleSubmit}
           loading={loading}
         />
 
-        <Text style={{textAlign:"center", fontSize: 14, marginTop: 24}}>Already have an account? <Text style={{color:"#2222ff"}}>Sign In</Text></Text>
+        <Text style={{textAlign:"center", fontSize: 14, marginTop: 24}}>Don't have an account? <Text style={{color:"#2222ff"}}>Sign Up</Text></Text>
 
-        <Text>{JSON.stringify({ name, email, password }, null, 4)}</Text>
+        <Text>{JSON.stringify({  email, password }, null, 4)}</Text>
       </View>
     </KeyboardAwareScrollView>
   );
 };
 
-export default Signup;
+export default Signin;
