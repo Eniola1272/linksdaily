@@ -10,12 +10,13 @@ import UserInput from "../Components/auth/UserInput";
 import SubmitButton from "../Components/auth/SubmitButton";
 import axios from "axios";
 import CircleLogo from "../Components/auth/CircleLogo";
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
 
 
 // import Text from "@kaloraat/react-native-text"
 
-const Signup = () => {
+const Signup = ({navigation}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,9 +37,11 @@ const Signup = () => {
         email,
         password,
       });
+
       setLoading(false);
       console.log("SIGN IN SUCCESS => ", data);
       alert("Sign up successful");
+
     } catch (err) {
       console.log(err);
       setLoading(false);
@@ -100,7 +103,7 @@ const Signup = () => {
           loading={loading}
         />
 
-        <Text style={{textAlign:"center", fontSize: 14, marginTop: 24}}>Already have an account? <Text style={{color:"#2222ff"}}>Sign In</Text></Text>
+        <Text style={{textAlign:"center", fontSize: 14, marginTop: 24}}>Already have an account? <Text style={{color:"#2222ff"}} onPress={() => navigation.navigate('Signin')}>Sign In</Text></Text>
 
         <Text>{JSON.stringify({ name, email, password }, null, 4)}</Text>
       </View>
