@@ -15,7 +15,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 // import Text from "@kaloraat/react-native-text"
 
-const Signin = () => {
+const Signin = ({navigation}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -91,7 +91,7 @@ const Signin = () => {
           loading={loading}
         />
 
-        <Text style={{textAlign:"center", fontSize: 14, marginTop: 24}}>Not yet registered? <Text style={{color:"#2222ff"}}>Sign Up</Text></Text>
+        <Text style={{textAlign:"center", fontSize: 14, marginTop: 24}}>Not yet registered? <Text style={{color:"#2222ff"}} onPress={() => navigation.navigate('Signup')}>Sign Up</Text></Text>
 
         <Text style={{textAlign:"center", fontSize: 14, marginTop: 24, color:"gray"}}>Forgot Password?</Text>
 

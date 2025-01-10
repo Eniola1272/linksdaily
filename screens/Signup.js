@@ -22,7 +22,7 @@ const Signup = ({navigation}) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  console.log("NAVIGATION => ", navigation);
+  // console.log("NAVIGATION => ", navigation);
   
 
   const handleSubmit = async () => {
