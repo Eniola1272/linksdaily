@@ -22,6 +22,9 @@ const Signup = ({navigation}) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
+  console.log("NAVIGATION => ", navigation);
+  
+
   const handleSubmit = async () => {
     setLoading(true);
     if (!name || !email || !password) {
@@ -101,7 +104,7 @@ const Signup = ({navigation}) => {
           title="Sign Up"
           handleSubmit={handleSubmit}
           loading={loading}
-        />
+        /> 
 
         <Text style={{textAlign:"center", fontSize: 14, marginTop: 24}}>Already have an account? <Text style={{color:"#2222ff"}} onPress={() => navigation.navigate('Signin')}>Sign In</Text></Text>
 
