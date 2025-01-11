@@ -17,9 +17,9 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 // import Text from "@kaloraat/react-native-text"
 
 const Signup = ({navigation}) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [name, setName] = useState("Eniola");
+  const [email, setEmail] = useState("date1272@gmail.com");
+  const [password, setPassword] = useState("qwerty123456");
   const [loading, setLoading] = useState(false);
 
   // console.log("NAVIGATION => ", navigation);
