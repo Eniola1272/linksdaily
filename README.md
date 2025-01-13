@@ -78,4 +78,4 @@ This project is licensed under the MIT License.
 
 ## **Acknowledgements**
 
-Thanks to Ryan Dhungel for Teaching me.
+Thanks to Ryan Dhungel for teaching me.
