@@ -11,9 +11,6 @@ import SubmitButton from "../Components/auth/SubmitButton";
 import axios from "axios";
 import CircleLogo from "../Components/auth/CircleLogo";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-
-
-
 // import Text from "@kaloraat/react-native-text"
 
 const Signup = ({navigation}) => {
